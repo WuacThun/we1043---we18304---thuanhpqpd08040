@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="bai3.js"></script> -->
+</head>
+<body>  
+    <script>
+        //nhap ho va ten , gioi tinh
+let hvt = prompt('xin moi nhap ho va ten:');
+let gt = prompt('moi nhap gioi tinh (nam/nu):');
+
+//tách các thành phần của tên 
+ let arr = hvt.split(" ");
+ 
+        let ho = arr[0];
+        let tenDem =arr.slice(1,arr.length -1).join(" ");
+        let ten = arr [arr.length-1];
+
+//in ra 
+document.write('HO: '+ho); 
+document.write('|TEN DEM :'+tenDem);
+document.write('|TEN: '+ten);
+
+//Thay doi ten dua theo gioi tinh
+
+let tenMoi;
+if(gt === "nam"){
+ arr.splice(1,1,"Văn");
+tenMoi = "Văn";
+   
+}else if(gt === "nữ"){
+  arr.splice(1,1,"Vẽ");
+ tenMoi = "Vẽ";
+}else{
+    document.write('khong nhan dang duoc gioi tinh cua ban!');
+}
+
+//in ra ten moi 
+document.write("Tên mới:"+ho+ " "+ tenMoi + " "+ten);
+    </script>
+</body>
+</html>

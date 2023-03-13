@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let weekDays = ["Tue", "Thu", "Sat", "Nine"];
+
+// Thêm các phần tử "Mon", "We", "Fri", "Sun"
+weekDays.splice(1, 0, "Mon");
+weekDays.splice(3, 0, "Wed");
+weekDays.splice(5, 0, "Fri");
+weekDays.splice(7, 0, "Sun");
+
+// Xóa phần tử "Nine"
+let nineIndex = weekDays.indexOf("Nine");
+if (nineIndex !== -1) {
+  weekDays.splice(nineIndex, 1);
+}
+
+document.write("weekDays"); // ["Tue", "Mon", "Thu", "Wed", "Sat", "Fri", "Sun"]
+
+    </script>
+</body>
+</html>
