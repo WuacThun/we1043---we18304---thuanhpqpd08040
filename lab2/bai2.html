@@ -9,24 +9,24 @@
     <body>
         <script>
        
-        let a = parseFloat(prompt("Nhập độ dài cạnh a: "));
-      let b = parseFloat(prompt("Nhập độ dài cạnh b: "));
-      let c = parseFloat(prompt("Nhập độ dài cạnh c: "));
+        let a = parseFloat(prompt("nhap do dai canh a= "));
+      let b = parseFloat(prompt("nhap do dai canh b= "));
+      let c = parseFloat(prompt("nhap do dai canh c="));
 
       if (a + b > c && a + c > b && b + c > a) {
         // a,b,c la canh tam giac
         if (a === b && b === c) {
-          document.write("Tam giác đều");
+          document.write("Tam giác deu");
         } else if (a === b || b === c || c === a) {
-            document.write("Tam giác cân");
+            document.write("Tam giác can");
         } else if (
           a * a + b * b === c * c ||
           a * a + c * c === b * b ||
           b * b + c * c === a * a
         ) {
-          document.write("Tam giác vuông");
+          document.write("Tam giác vuong");
         } else {
-            document.write("Tam giác thường");
+            document.write("Tam giác thuong");
         }
       } else {
         document.write("day khong phai la tam giac");
