@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="bai2.js"></script> -->
+</head>
+<body>
+    <script>
+        function calculator(){
+            const number1 = Number(prompt("Nhập số thứ nhất: "));
+            const number2 = Number(prompt("Nhập số thứ hai: "));
+            const operator = prompt("Chọn phép tính (+, -, *, /): ");
+            
+            let result;
+            
+            switch(operator) {
+                case '+':
+                    result = number1 + number2;
+                    break;
+                  
+                case '-':
+                    result = number1 - number2;  
+                    break;
+                    
+                case '*':
+                    result = number1 * number2;
+                    break;
+        
+                case '/':
+                    result = number1 / number2;
+                    break;
+                  
+                default:
+                    alert("Vui lòng chọn phép tính hợp lệ");
+                    return calculator();
+            }
+            
+            alert(`Kết quả là: ${result}`);
+        }
+        
+        calculator();
+        
+    </script>
+</body>
+</html>
