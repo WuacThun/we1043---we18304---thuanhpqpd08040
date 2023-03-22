@@ -7,6 +7,7 @@ function nutbam(btn) {
   const themketqua = document.getElementById("ketqua");
 
   if (isNaN(nhanso)) {
+    //nếu nhấn AC thì nó reset màn hình chính
     if (nhanso == "AC") {
       so1 = "";
       so2 = "";
@@ -15,6 +16,7 @@ function nutbam(btn) {
       return;
     }
     if (nhanso == "=") {
+      //nếu nhấn "=" thì nó tính ra kết quả
       const result = perform(so1, so2, dapan);
       themketqua.value = result;
       so1 = "";
@@ -39,12 +41,16 @@ function perform(ord1, ord2, otor) {
   ord2 = Number(so2);
 
   switch (otor) {
+    //nếu bấm + thì nó cộng
     case "+":
       return ord1 + ord2;
+      //nếu - thì hiệu
     case "-":
       return ord1 - ord2;
+      //nếu * thì nhân
     case "*":
       return ord1 * ord2;
+      //nếu / thì chia
     case "/":
       return ord1 / ord2;
   }
