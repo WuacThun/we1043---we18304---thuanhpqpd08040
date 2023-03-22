@@ -1,36 +1,51 @@
-function cong(a,b){
-    return a +b;
-}
-function tru(a,b){
-    return a -b;
-}
-function nhan(a,b){
-    return a *b;
-}
-function chia (a,b){
-    if (b == 0 ){
-        return "không chia cho 0 được";
+let so1 = "";
+let so2 = "";
+let dapan;
+
+function nutbam(btn) {
+  const nhanso = btn.innerText;
+  const themketqua = document.getElementById("ketqua");
+
+  if (isNaN(nhanso)) {
+    if (nhanso == "AC") {
+      so1 = "";
+      so2 = "";
+      dapan = undefined;
+      themketqua.value = "";
+      return;
     }
-    return a /b;
+    if (nhanso == "=") {
+      const result = perform(so1, so2, dapan);
+      themketqua.value = result;
+      so1 = "";
+      so2 = "";
+      dapan = undefined;
+    } else {
+        dapan = nhanso;
+    }
+  } else {
+    if (dapan) {
+      so2 += nhanso;
+      themketqua.value = so2;
+    } else {
+      so1 += nhanso;
+      themketqua.value = so1;
+    }
+  }
 }
-let num1 = parseFloat(prompt("Nhập số thứ nhất:"));
-let num2 = parseFloat(prompt("Nhập số thứ hai:"));
-let dau = prompt("Nhập phép tính (+, -, *, /):");
-let result;
-switch (operator) {
-  case "+":
-    result = add(num1, num2);
-    break;
-  case "-":
-    result = subtract(num1, num2);
-    break;
-  case "*":
-    result = multiply(num1, num2);
-    break;
-  case "/":
-    result = divide(num1, num2);
-    break;
-  default:
-    result = "Phép tính không hợp lệ";
+
+function perform(ord1, ord2, otor) {
+  ord1 = Number(so1);
+  ord2 = Number(so2);
+
+  switch (otor) {
+    case "+":
+      return ord1 + ord2;
+    case "-":
+      return ord1 - ord2;
+    case "*":
+      return ord1 * ord2;
+    case "/":
+      return ord1 / ord2;
+  }
 }
-alert("kết quả= "+ result );
