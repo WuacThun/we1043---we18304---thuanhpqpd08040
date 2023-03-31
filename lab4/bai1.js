@@ -24,7 +24,7 @@ class Student {
       
   }
 
-  // Phương thức tính số tuổi hiện tại theo ngày
+  // tính tuổi hiện tại theo ngày
   getTinhTuoiTheoNgay() {
       const ngaysinh = new Date(this.dob);
       const hientai =new Date ();
@@ -34,7 +34,7 @@ class Student {
   }
 }
 
-// Tạo danh sách studentList
+// Tạo danh sách 5 học sinh
 const studentList = [
   new Student(1,'Ly','Nguyễn','WEB01','nhuly@gmail.com.vn','0933928111','1999-08-12'),
   new Student(2,'Hưng','Lê','WEB02','bimbpp@gmail.com.net.com','0906138104','1990-08-02'),
@@ -43,17 +43,17 @@ const studentList = [
   new Student(5,'Thuận','Hồ','WEB02','binngoc@gmail.com','0420301451','2004-01-01')
 ];
 
-// Sắp xếp danh sách sinh viên theo thứ tự từ thấp đến cao theo số tuổi tính theo ngày
+// sắp xép danh dsachs
 studentList.sort((a, b) => a.getTinhTuoiTheoNgay() - b.getTinhTuoiTheoNgay());
 
-// In ra danh sách sinh viên theo thứ tự từ thấp đến cao theo số tuổi tính theo ngày
-document.write('Danh sách sinh viên theo thứ tự từ thấp đến cao theo số tuổi tính theo ngày:');
+// in ra danh sach sinh vien theo thu tu tu thao den cao tinh theo ngau
+document.write('DANH SACH :');
 studentList.forEach(student => document.write(`${student.getFullName()}, ${student.getTinhTuoiTheoNam()} tuổi (${student.getTinhTuoiTheoNgay()} ngày tuổi)`));
 
-// Lấy kích thước màn hình
+// Lay kich thuoc tu man hinh 
 var rong = window.screen.width;
 var dai = window.screen.height;
 
-// In thông tin kích thước màn hình ra console
+// In thong tin kich thuoc ra man hinh
 
 document.writeln("Kích thước màn hình là " + rong + "x" + dai + " "); 

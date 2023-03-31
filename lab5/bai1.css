@@ -1,0 +1,29 @@
+body{  
+    width: 98%;
+    border: 1px solid ;
+}
+.head1{
+}
+#text1{
+    height: 50px;
+    width: 98%;
+}
+.head2{}
+#text2{
+    height: 75px;
+    width: 98%;
+}
+.nutbam{
+    margin-left: 94%;
+    height: 30px;
+    border: 100% solid;
+    border-radius: 30px;
+}
+.nutbam:hover{
+    background-color: bisque;
+}
+.nutbam:active{
+    background-color: rgb(173, 112, 112);
+}
+.nutbam:focus{
+}
