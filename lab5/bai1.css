@@ -5,12 +5,14 @@ body{
 .head1{
 }
 #text1{
+    border: 1px solid ;
     height: 50px;
     width: 98%;
 }
 .head2{}
 #text2{
-    height: 75px;
+    height : 75px;
+    border: 1px solid ;
     width: 98%;
 }
 .nutbam{

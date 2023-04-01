@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bai1.css">
+<script src="bai1.js"></script>
+
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img id="anh" src="/we1043---we18304---thuanhpqpd08040/lab6/anh/nit2.1.jpeg" >
+  <div class="text">NỊT 1</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img id="anh" src="/we1043---we18304---thuanhpqpd08040/lab6/anh/nit2.2.jpeg" >
+  <div class="text">NỊT 2</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img id="anh" src="/we1043---we18304---thuanhpqpd08040/lab6/anh/nit2.3.jpeg" >
+  <div class="text">NỊT 3</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span id="dots" class="dot" onclick="currentSlide(1)"></span> 
+  <span id="dots" class="dot" onclick="currentSlide(2)"></span> 
+  <span id="dots" class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+  let anh = document.getElementById("anh");
+anh.addEventListener("click",function(){
+  anh.style.boxShadow = "0 0 5px red"
+anh.style.border = "1px solid black";
+});
+
+</script>
+
+</body>
+</html> 
