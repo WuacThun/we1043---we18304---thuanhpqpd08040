@@ -42,9 +42,13 @@
 
 <script>
   let anh = document.getElementById("anh");
-anh.addEventListener("click",function(){
+anh.addEventListener("mouseenter",function(){
   anh.style.boxShadow = "0 0 5px red"
 anh.style.border = "1px solid black";
+});
+anh.addEventListener("mouseup",function(){
+anh.style.border = "1px dotted green";
+anh.style.boxShadow ("0 0 10px green" );
 });
 
 </script>
