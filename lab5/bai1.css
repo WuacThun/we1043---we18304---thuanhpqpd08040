@@ -1,5 +1,5 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+
     margin: 0px auto;
 }
 
@@ -37,15 +37,15 @@ body {
 
 .btn {
     padding: 2px 20px 2px 20px;
-    background-color: green;
+    background-color: rgb(83, 86, 83);
     color: white;
     border: 0px;
-    box-shadow: 3px 3px 3px rgb(2, 104, 2);
+    box-shadow: 3px 3px 3px rgb(134, 146, 134);
     border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: rgba(0, 128, 0, 0.884);
+    background-color: rgba(125, 145, 125, 0.884);
     font-weight: bold;
 }
 

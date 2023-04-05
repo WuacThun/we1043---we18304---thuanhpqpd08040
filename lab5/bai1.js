@@ -8,7 +8,7 @@ function addTask() {
     let inputName = document.getElementById("task-name").value;
     let inputDescription = document.getElementById("description").value;
     if (inputName.length < 5 || inputDescription.length < 10) {
-        alert("Task name must be above 5 characters and description must be above 10 characters!")
+        alert("Bắt buộc tên >5 ký tự và miêu tả phải > 10 ký tự ")
     } else {
         // create div class row
         let row = document.createElement("div");
