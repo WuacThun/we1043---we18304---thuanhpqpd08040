@@ -16,5 +16,6 @@ bin.addEventListener("drop", (e) => {
   let itemID = e.dataTransfer.getData("itemID");
   let item = document.getElementById("itemId");
   bin.target.appendChild(item);
+//   xoá item
   item.remove();
 });
