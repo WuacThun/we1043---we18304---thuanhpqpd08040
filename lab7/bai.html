@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tong{
+            width: 50%;
+            background-color: rgb(190, 162, 167);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        .main{
+            display: flex;
+            flex-direction: row;
+            padding: 5px;
+        }
+        .trai{
+            width: 150px;
+            height: 250px;
+            border: 3px solid rgb(141, 106, 93);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .phai{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+
+
+        }
+        .item{
+            padding: 2px 20px 2px 20px;
+            border: 1px dashed rgb(218, 24, 24);
+            margin: 3px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tong">
+        <h5> KÉO VÀ XOÁ</h5>
+        <p> thích xoá nào thì xoá  </p>
+        <div class="main">
+            <div id="bin" class="trai">
+                BIN 
+
+            </div>
+            <div class="phai">
+                <span class="item" id="one">one</span>
+                <span class="item" id="two">two</span>
+                <span class="item" id="three">three</span>
+                <span class="item" id="four">four</span>
+                <span class="item" id="five">five</span>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        let items = document.getElementsByClassName("item");
+        
+        for(let i=0; i < items.length; i++){
+            let item = items[i];
+            item.setAttribute("draggable",true);
+            item.addEventListener("dragstart",(event) =>{
+                event.dataTransfer.setData("itemId", item.id);
+            });
+
+        }
+        let bin = document.getElementById("bin");
+        bin.addEventListener("dragover", (event) =>{
+            if(event.preventDefault) event.preventDefault();
+        });
+        bin.addEventListener("drop", (event)=>{
+            let itemId = event.dataTransfer.getData("itemId");
+            let item = document.getElementById(itemId);
+            bin.appendChild(item);
+            item.remove(item); 
+
+        });
+
+    </script>
+</body>
+</html>

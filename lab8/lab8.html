@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            background-color: rgb(72, 64, 54);
+            width: 1000px;
+            height: 500px;
+            text-align: center;
+        }
+        button{
+            margin-right: 5px;
+        }
+        #myplayer{
+            border: 5px solid white;
+            border-bottom: 20px solid white;
+        }
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Bo xì bo</h1>
+        <div id="player">
+            <video  id="myplayer" width="640px " height="360px">
+                <source src="boxibo.mp4" type="video/mp4">
+            </video>
+            <div id="controls">
+                <button onclick="playPause()">Play/Pause</button>
+                <button onclick="stopVideo()">Stop</button>
+                <button onclick="replayVideo()">RePlay</button>
+                <button onclick="volumeUp()">Volume(+)</button>
+                <button onclick="volumedown()">Volume(-)</button>
+                <button onclick="muteVolume()">Mute/Unmute</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var player = document.getElementById("myplayer");
+
+        function playPause(){
+            if (player.paused) {player.play();}
+            else {player.pause();}
+        }
+        function stopVideo(){
+            player.pause();
+            if(player.currentTime){player.currentTime = 0; }
+        }
+        function replayVideo(){
+            player.currentTime = 0;
+            player.play();
+        }
+        function volumeUp(){
+            if (player.volume < 1)
+            player.volume = parseFloat(player.volume + 0.1).toFixed(1);
+        }
+        function volumedown(){
+             if (player.volume > 0)
+            player.volume = parseFloat(player.volume - 0.1).toFixed(1);
+        }
+        function muteVolume(){
+            if(player.muted){player.muted=false;}
+            else {player.muted=true;}
+        }
+    </script>
+</body>
+</html>
