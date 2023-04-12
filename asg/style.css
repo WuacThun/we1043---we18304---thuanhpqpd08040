@@ -1,93 +1,192 @@
+
 body {
   padding: 0px;
   margin: 0px;
-  background-color: rgb(11, 14, 17);
+  background-image: radial-gradient(
+      circle at 100% 150%,
+      silver 24%,
+      white 24%,
+      white 28%,
+      silver 28%,
+      silver 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 150%,
+      silver 24%,
+      white 24%,
+      white 28%,
+      silver 28%,
+      silver 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      white 10%,
+      silver 10%,
+      silver 23%,
+      white 23%,
+      white 30%,
+      silver 30%,
+      silver 43%,
+      white 43%,
+      white 50%,
+      silver 50%,
+      silver 63%,
+      white 63%,
+      white 71%,
+      transparent 71%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      white 5%,
+      silver 5%,
+      silver 15%,
+      white 15%,
+      white 20%,
+      silver 20%,
+      silver 29%,
+      white 29%,
+      white 34%,
+      silver 34%,
+      silver 44%,
+      white 44%,
+      white 49%,
+      transparent 49%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 50%,
+      white 5%,
+      silver 5%,
+      silver 15%,
+      white 15%,
+      white 20%,
+      silver 20%,
+      silver 29%,
+      white 29%,
+      white 34%,
+      silver 34%,
+      silver 44%,
+      white 44%,
+      white 49%,
+      transparent 49%,
+      transparent
+    );
+  background-size: 100px 50px;
 }
-/* hover MENU */
-.menu span:hover {
-  box-shadow: 0 0 5px;
-  transform: translate(0, -5px);
-  color: rgb(82, 188, 153);
+*{
+  scroll-behavior: smooth;
+}
+.home:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  background-color: rgb(84, 98, 94);
+  color: bisque;
+  border-radius: 30px;
 }
 .home {
-  color: rgb(25, 166, 86);
+  border-radius: 10px;
+}
+.menu {
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
 }
 .wrapper {
   width: 90%;
-
-  background-color: rgb(61, 61, 53);
+  background-color: antiquewhite;
   margin: auto;
   display: flex;
   flex-direction: column;
 }
 
 .header {
-  background-size: 100% auto;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(61, 68, 60, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
   height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 30px;
+  padding: 10px;
   text-align: center;
 }
 .logo {
-  background-image: none;
   width: 45px;
   height: 45px;
 }
-.allhome{
-  border-radius: 10px;
-  padding: 3px;
-padding-left: 30px;
-  display: flex;
-  flex-direction: row-reverse;
-}
-.home{
-  text-align: center;
-  border-radius: 10px;
 
-}
 .menu {
+
   display: flex;
   flex-direction: row;
 }
 
 .menu span {
-  margin: 0 auto;
-  border-radius: 50px;
-  border: 2px solid;
   padding: 10px;
-
+  /* background-color: palevioletred; */
   margin: 5px;
+  background-image: url(/asg/anh/backsushi2.jpeg);
 }
-.banner > img {
-  margin: 0 auto;
-}
+
 .banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 100%;
-
   background-color: rgb(179, 165, 39);
-  height: 250px;
-}
 
+  width: 100%;
+}
+.marque {
+  font-size: 20px;
+  width: 100%;
+  background: rgb(93, 108, 213);
+  background: linear-gradient(
+    90deg,
+    rgba(93, 108, 213, 1) 27%,
+    rgba(9, 21, 77, 1) 72%,
+    rgba(7, 67, 118, 1) 78%,
+    rgba(3, 165, 205, 1) 86%,
+    rgba(0, 245, 255, 1) 96%
+  );
+  background-color: aliceblue;
+}
 .partners {
-  background-color: beige;
+  background-color: rgb(76, 76, 69);
   padding: 20px;
   display: flex;
+  height: 250px;
   flex-direction: row;
   justify-content: space-evenly;
 }
+.p-tiem:hover {
+  transform: scale(1.2, 1.2);
+}
 .p-tiem {
-  width: 80px;
-  height: 40px;
+  width: 100px;
+  height: 150px;
   background-color: grey;
 }
 
 .service {
-  background-color: rgb(189, 183, 184);
+  width: 100%;
+  height: 600px;
+  /* background-color: rgb(50, 63, 74); */
+ 
+  background: rgb(93,108,213);
+background: linear-gradient(90deg, rgba(93,108,213,1) 18%, rgba(38,63,179,1) 72%, rgba(3,165,205,1) 86%);
   min-height: fit-content;
   display: flex;
   flex-direction: column;
@@ -96,18 +195,20 @@ padding-left: 30px;
 }
 
 .service-row {
-  background-color: rgb(209, 190, 167);
   min-height: fit-content;
   margin: 5px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-
+.item:hover {
+  transform: scale(1.3, 1.2);
+}
 .item {
   display: flex;
   flex-direction: column;
-  background-color: rgb(210, 214, 172);
+  /* background-color: rgb(16, 12, 11); */
+  background-image: url(/asg/anh/backsushi.jpeg);
   margin: 20px;
   align-items: center;
   justify-content: center;
@@ -118,11 +219,175 @@ padding-left: 30px;
   margin: 5px;
   width: 100px;
   height: 120px;
-  background-color: rgb(175, 182, 139);
+  background-color: aqua;
 }
-.image:hover {
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
   background-color: #bbb;
-  box-shadow: 0 0 10px;
-  transform: translate(0, 5px);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
-/* //ảnh chuyển động */
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+.sevname:hover {
+  transform: scale(1.5, 1.2);
+  background-color: beige;
+}
+.sevname {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+
+  border-radius: 20px 300px;
+}
+#partnerimg:hover {
+  transform: scale(1.3, 1);
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slideimg {
+  height: 400px;
+  width: 100%;
+}
+/* .serimg:hover{
+  transform: scale(1.8,1.6);
+} */
+.text {
+  border-radius: 100px;
+  background-color: rgb(139, 72, 72);
+}
+#page2{
+  text-align: center;
+margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+}
+#page1{
+text-align: center;
+margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.paper {
+padding: 30px;
+  width: 100%;
+justify-content: center;
+align-items: center;
+text-align: center;
+  background-color: aquamarine;
+}
+.formapp {
+  width: 100%;
+  height: 300px;
+
+  background-color: rgb(108, 206, 173);
+}
+.footer {
+  width: 100%;
+  height: 70px;
+  background-color: tomato;
+}
+.formmap:hover {
+  transform: scale(1.3, 1.3);
+}
+.formtext{
+  text-align: center;
+  margin: 0px auto;
+}
+.formmap {
+
+  padding: 10px;
+  margin: 0 auto;
+  width: 400px;
+  border-radius: 30px;
+  border: 1px solid;
+}
