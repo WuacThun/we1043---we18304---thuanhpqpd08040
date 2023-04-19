@@ -36,55 +36,8 @@ let partnerimg = document.getElementById("partnerimg");
 partnerimg.addEventListener("mouseenter", function(){
   partnerimg.style.scale(1.5,1.2);
 });
-let  
-function send(){
-    var arr = document.getElementsByTagName('input');
-    var hoten = arr[0].value;
-    var tuoi = arr[1].value;
-    var diachi = arr[2].value;
-    var check1 = arr[5].checked;
-    var check2 = arr[6].checked;
-    var check3 = arr[7].checked;
-    var gioitinh = "";
 
-    var sanpham = "";
-    if(arr[3].checked){
-        gioitinh ="nam";
-    }else{
-        gioitinh= "nu";
-    }
-    for(var i=5; i<=7;i++){
-       if( arr[i].checked){
-        sanpham = sanpham + arr[i].value+" ";
-        
-       }
-    }
 
-    if(hoten =="" || tuoi =="" || diachi ==""){
-        alert("Bạn nhập thiếu thông tin!!!!");
-        return;
-
-    }
-    if(isNaN(tuoi)){// neu nguoi dung nhap kh phải là số 
-        alert("Bạn nhập sai!! vui lòng nhập số tuổi ");
-        return;
-    }
-
-    if(check1||check2||check3){
-       
-    }else{
-        alert("Bạn chọn ít nhất 1 để đặt!");
-        return;
-    }
-
-    var choice =confirm('Thông tin khách hàng đã nhập:\n'+hoten+"\n" +tuoi+"\n" + diachi+ "\n"+ gioitinh+"\n" + sanpham);
-        if(choice==1){
-            alert("Chúc mừng bạn đã đặt hàng thành công")
-        }    
-}
-function resetForm(){
-    document.getElementsByTagName('form')[0].reset();
-}
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
@@ -213,4 +166,10 @@ alert("NHẬP MÃ THÀNH CÔNG")
 function sale(){
   alert("CHÚC MỪNG BẠN NHẬN ĐƯỢC MÃ SALE 10%: THUANDEPZAI ")
 
+}
+let loca = document.getElementById("loca")
+loca.addEventListener("click", loca());
+
+function loca(){
+ window.location.assign("https://www.google.com/maps/place/137+Nguy%E1%BB%85n+Th%E1%BB%8B+Th%E1%BA%ADp,+Thanh+Kh%C3%AA+T%C3%A2y,+Li%C3%AAn+Chi%E1%BB%83u,+%C4%90%C3%A0+N%E1%BA%B5ng,+Vietnam/@16.0880763,108.1329168,14z/data=!4m20!1m13!4m12!1m4!2m2!1d108.1310182!2d16.1109168!4e1!1m6!1m2!1s0x314218e6e72e66f5:0x46619a0e2d55370a!2zMTM3IE5ndXnhu4VuIFRo4buLIFRo4bqtcCwgVGhhbmggS2jDqiBUw6J5LCBMacOqbiBDaGnhu4N1LCDEkMOgIE7hurVuZw!2m2!1d108.1699276!2d16.0757539!3m5!1s0x314218e6e72e66f5:0x46619a0e2d55370a!8m2!3d16.0757539!4d108.1699276!16s%2Fg%2F11hbm447pm")
 }
